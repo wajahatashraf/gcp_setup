@@ -1,7 +1,23 @@
-flask
-pytest
-selenium
-pytest-html
-requests
-gunicorn
-google-cloud-storage
+# Core test framework
+selenium>=4.27.0
+pytest>=8.0.0
+flask>=2.3.4
+gunicorn>=21.2.0
+
+# Pytest plugins
+pytest-xdist>=3.5.0 # Parallel test execution
+pytest-html>=4.1.0 # HTML test reports
+pytest-cov>=4.1.0 # Code coverage
+pytest-timeout>=2.2.0 # Test timeout handling
+pytest-rerunfailures>=13.0 # Retry failed tests
+pytest-metadata>=3.0.0 # Test metadata
+
+# Utilities
+requests>=2.31.0 # HTTP client for API tests
+google-cloud-storage>=2.15.0 # Google Cloud Storage client
+faker>=22.0.0 # Test data generation
+Pillow>=10.2.0 # Image/screenshot handling
+# webdriver-manager removed - ChromeDriver is pre-installed in Docker image
+
+# Reporting
+allure-pytest>=2.13.2 # Allure test reporting
